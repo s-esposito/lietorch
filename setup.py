@@ -5,7 +5,7 @@ import os.path as osp
 
 ROOT = osp.dirname(osp.abspath(__file__))
 
-CUDA_HOME = os.environ["CUDA_HOME"]
+CUDA_HOME = os.environ.get("CUDA_HOME", None)
 if CUDA_HOME is None:
     raise ValueError("Please set CUDA_HOME environment variable to the path of your CUDA installation")
 
